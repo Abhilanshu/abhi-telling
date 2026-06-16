@@ -835,6 +835,7 @@ const fireBackMatRef = useRef();
 const spotsRef = useRef();
 const spotsMatRef = useRef();
 const floorMatRef = useRef();
+const crystalsGroupRef = useRef();
 
 
 // Create Double-Pass Glass Materials
@@ -1272,7 +1273,8 @@ const names = [
 'Camera_pointerInfluence',
 'isFollowing',
 'Post_halo',
-'Post_haloMinMaxShift'
+'Post_haloMinMaxShift',
+'Projects_visible'
 ];
 names.forEach(name => {
 paramNodes.current[name] = devGLTF.scene.getObjectByName(name);
@@ -1606,7 +1608,7 @@ if (dummyPhoenix && birdRef.current) {
 }
 
 // Update neck bone mouse tracking (on the REAL bird!)
-const neckBone = birdScene ? birdScene.getObjectByName('DEF-neck02') : null;
+const neckBone = birdScene ? birdScene.getObjectByName('b_neck') : null;
 if (neckBone) {
   const eps = 0.0001;
   const rotationChanged = 
@@ -1631,6 +1633,13 @@ if (neckBone) {
 
     neckBoneLastRotationRef.current.copy(neckBone.rotation);
   }
+}
+
+// Toggle crystal group visibility from timeline node Projects_visible
+const projectsVisibleNode = paramNodes.current['Projects_visible'];
+const projectsVisible = projectsVisibleNode ? projectsVisibleNode.position.x : 0.0;
+if (crystalsGroupRef.current) {
+  crystalsGroupRef.current.visible = projectsVisible > 0.5;
 }
 
 // Position feather
@@ -1919,6 +1928,7 @@ color="#fdebfd"
 )}
 
 {/* 6. Case Study Crystals with custom shaders */}
+<group ref={crystalsGroupRef}>
 {crystalNodes.map((node, i) => (
 <Crystal
 key={`crystal-${i}`}
@@ -1955,6 +1965,7 @@ hoveredCaseRef.current = -1;
 }}
 />
 ))}
+</group>
 
 
 {/* 7. Curved Mountains cylinder background silhouette */}
