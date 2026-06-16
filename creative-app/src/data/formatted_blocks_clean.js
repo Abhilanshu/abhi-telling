@@ -33,10 +33,10 @@ const TEXT_BLOCKS = [
   {
     id: 'crystal0',
     className: 'xs:left-0 lg:left-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 110 + 0 + 0,
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 230 + (isMobile ? -38 : 0) + (isTablet ? -42 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 110,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 120,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 140,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 150,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:left-80">
                 <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Coinbase & Warriors</span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">Brand activation</span>
@@ -48,10 +48,10 @@ const TEXT_BLOCKS = [
   {
     id: 'crystal1',
     className: 'xs:right-0 lg:right-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 140 + (isMobile ? 6 : 0) + (isTablet ? 7 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 260 + (isMobile ? -39 : 0) + (isTablet ? -41 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 150,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 160,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 180,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 190,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:right-80">
                 <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Salesforce</span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">Agentforce360 website</span>
@@ -63,10 +63,10 @@ const TEXT_BLOCKS = [
   {
     id: 'crystal2',
     className: 'xs:left-0 lg:left-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 180 + (isMobile ? 5 : 0) + (isTablet ? 5 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 290 + (isMobile ? -47 : 0) + (isTablet ? -55 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 190,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 200,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 220,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 230,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:left-80">
                 <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Intel | ai.io</span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">Event booth experience</span>
@@ -78,10 +78,10 @@ const TEXT_BLOCKS = [
   {
     id: 'crystal3',
     className: 'xs:right-0 lg:right-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 210 + (isMobile ? 2 : 0) + (isTablet ? 3 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 310 + (isMobile ? -42 : 0) + (isTablet ? -45 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 230,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 240,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 260,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 270,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:right-80">
                 <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Vogue Business | Archival </span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">Editorial  website</span>
@@ -93,40 +93,40 @@ const TEXT_BLOCKS = [
   {
     id: 'crystal4',
     className: 'xs:left-0 lg:left-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 230 + (isMobile ? 5 : 0) + (isTablet ? 4 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 335 + (isMobile ? -40 : 0) + (isTablet ? -45 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 270,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 280,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 300,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 310,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:left-80">
-                <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Noomo Labs</span><br>
+                <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Crystal Labs</span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">3D website</span>
                 <span class="absolute xs:hidden lg:block w-full blur-[80px] h-151 bg-dark-400 left-0 top-0 rounded-[100%] -translate-y-1/4"></span>
               </span>`,
     isCase: true,
-    link: '/cases/noomo-labs'
+    link: '/cases/crystal-labs'
   },
   {
     id: 'crystal5',
     className: 'xs:right-0 lg:right-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 270 + (isMobile ? -7 : 0) + (isTablet ? -4 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 370 + (isMobile ? -46 : 0) + (isTablet ? -55 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 310,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 320,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 340,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 350,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:right-80">
-                <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Noomo Valentime </span><br>
+                <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">Crystal Valentime </span><br>
                 <span class="text-sans-18 -mt-10 relative z-2">3D storytelling</span>
                 <span class="absolute xs:hidden lg:block w-full blur-[80px] h-151 bg-dark-400 left-0 top-0 rounded-[100%] -translate-y-1/4"></span>
               </span>`,
     isCase: true,
-    link: '/cases/noomo-valentime'
+    link: '/cases/crystal-valentime'
   },
   {
     id: 'crystal6',
     className: 'xs:left-0 lg:left-[20vw]',
-    scrollStart: (e, isMobile, isTablet) => e(16) + 300 + (isMobile ? -7 : 0) + (isTablet ? -7 : 0),
-    scrollEnd: (e, isMobile, isTablet) => e(16) + 390 + (isMobile ? -32 : 0) + (isTablet ? -35 : 0),
-    scrollStart2: null,
-    scrollEnd2: null,
+    scrollStart: (e, isMobile, isTablet) => e(16) + 350,
+    scrollEnd: (e, isMobile, isTablet) => e(16) + 360,
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 380,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 390,
     content: `<span class="flex xs:items-center lg:items-start gap-0 flex-col xs:relative lg:absolute h-full lg:-top-12 lg:left-80">
                 <span class="xs:text-sans-26 lg:text-sans-50 whitespace-nowrap relative z-2">AMD</span><br>
                 <span class="text-sans-18 -mt-10 whitespace-nowrap relative z-2">Digital event experience</span>
@@ -409,8 +409,8 @@ const TEXT_BLOCKS = [
     className: 'top-1/8 left-1/2 -translate-x-1/2 xs:w-full lg:w-auto',
     scrollStart: (e, isMobile, isTablet) => e(15) + 40,
     scrollEnd: (e, isMobile, isTablet) => e(15) + 130,
-    scrollStart2: (e, isMobile, isTablet) => e(15) + 225 - (isMobile ? 50 : 0) - (isTablet ? 70 : 0),
-    scrollEnd2: (e, isMobile, isTablet) => e(15) + 430 - (isMobile ? 10 : 0) - (isTablet ? 70 : 0),
+    scrollStart2: (e, isMobile, isTablet) => e(16) + 10,
+    scrollEnd2: (e, isMobile, isTablet) => e(16) + 80,
     content: `<p class='xs:text-sans-38 lg:text-sans-66 text-center'>
              <span>Where <i class="xs:text-serif-38 lg:text-serif-66 lg:mr-3">stories</i></span><br>
              <span class="inline-block lg:-translate-y-10">become experiences</span><br>

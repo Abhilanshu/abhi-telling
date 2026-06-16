@@ -508,20 +508,6 @@ export default function App() {
               abhi <span className="serif-italic">telling</span>
             </div>
           </div>
-          <nav className="nav-links">
-            {[
-              { label:'Agency',  href:'https://noomoagency.com',      label2:'Visit' },
-              { label:'Labs',    href:'https://labs.noomoagency.com', label2:'Visit' },
-              { label:'Contact', href:'mailto:hello@noomoagency.com', label2:'Mail'  },
-            ].map(({ label, href, label2 }) => (
-              <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined}
-                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="nav-btn interactive"
-                onMouseEnter={() => window.updateCustomCursor?.(true, label2)}
-                onMouseLeave={() => window.updateCustomCursor?.(false, '')}
-              >{label}</a>
-            ))}
-          </nav>
         </header>
 
         {/* HERO + START OVERLAY (before experience) */}
@@ -597,25 +583,6 @@ export default function App() {
                 <div className="footer-logo-text">
                   abhi <span className="serif-italic">telling</span>
                 </div>
-              </div>
-              
-              <a className="footer-email interactive" href="mailto:hello@noomoagency.com"
-                onMouseEnter={() => window.updateCustomCursor?.(true, 'Mail')}
-                onMouseLeave={() => window.updateCustomCursor?.(false, '')}
-              >
-                hello@noomoagency.com
-              </a>
-              
-              <div className="footer-social">
-                <a href="https://x.com/noomoagency" target="_blank" rel="noopener noreferrer" className="footer-social-link interactive"
-                  onMouseEnter={() => window.updateCustomCursor?.(true, 'Visit')}
-                  onMouseLeave={() => window.updateCustomCursor?.(false, '')}>x</a>
-                <a href="https://www.instagram.com/noomoagency/" target="_blank" rel="noopener noreferrer" className="footer-social-link interactive"
-                  onMouseEnter={() => window.updateCustomCursor?.(true, 'Visit')}
-                  onMouseLeave={() => window.updateCustomCursor?.(false, '')}>Instagram</a>
-                <a href="https://www.linkedin.com/company/noomoagency" target="_blank" rel="noopener noreferrer" className="footer-social-link interactive"
-                  onMouseEnter={() => window.updateCustomCursor?.(true, 'Visit')}
-                  onMouseLeave={() => window.updateCustomCursor?.(false, '')}>LinkedIn</a>
               </div>
             </div>
             <div style={{ height: '20px' }}></div>

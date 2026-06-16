@@ -285,8 +285,8 @@ export default function Crystal({
     "Salesforce - Agentforce 360",
     "Intel - Event Booth Experience",
     "Vogue Business - Editorial Site",
-    "Noomo Labs - 3D Website",
-    "Noomo Valentime - 3D Storytelling",
+    "Crystal Labs - 3D Website",
+    "Crystal Valentime - 3D Storytelling",
     "AMD - Digital Event Experience"
   ];
 

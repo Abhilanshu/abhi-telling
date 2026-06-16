@@ -1559,15 +1559,16 @@ const spherical = new THREE.Spherical().setFromVector3(offsetVec);
 const pointerInfluenceNode = paramNodes.current['Camera_pointerInfluence'];
 const pointerInfluence = pointerInfluenceNode ? pointerInfluenceNode.position.x : 5.0;
 
-// Convert pointer offset to angles (radians)
-const sX = (mouseParallax.current.x / 180.0) * Math.PI;
-const sY = (mouseParallax.current.y / 180.0) * Math.PI;
+// Convert pointer offset to angles (radians) - scaled by pointerInfluence to match original squared multiplication
+const sX = (mouseParallax.current.x / 180.0) * Math.PI * pointerInfluence;
+const sY = (mouseParallax.current.y / 180.0) * Math.PI * pointerInfluence;
+
 
 const t = transitionProgress.current;
 const influence = pointerInfluence * (1.0 - t);
 
-spherical.theta += sX * influence;
-spherical.phi = Math.max(0.01, Math.min(Math.PI - 0.01, spherical.phi - sY * influence));
+spherical.theta += sX * (1.0 - t); // scaled once by sX, and once by the timeline transition influence
+spherical.phi = Math.max(0.01, Math.min(Math.PI - 0.01, spherical.phi - sY * (1.0 - t)));
 
 // Compute base camera and target positions with mouse parallax
 const baseCamPos = new THREE.Vector3().setFromSpherical(spherical).add(targetPos);
@@ -1630,6 +1631,18 @@ if (neckBone) {
     const lerp = (a, b, val) => a + (b - a) * val;
     neckBone.rotation.x = lerp(neckBoneRotationRef.current.x, rotationX, isFollowing);
     neckBone.rotation.y = lerp(neckBoneRotationRef.current.y, rotationY, isFollowing);
+
+    if (state.clock.getElapsedTime() * 60 % 30 < 1) {
+      console.log("NECK_ROTATION_DEBUG:", {
+        mouseX: mouseParallax.current.x,
+        mouseY: mouseParallax.current.y,
+        isFollowing: isFollowing,
+        rotX: rotationX,
+        rotY: rotationY,
+        boneRotX: neckBone.rotation.x,
+        boneRotY: neckBone.rotation.y
+      });
+    }
 
     neckBoneLastRotationRef.current.copy(neckBone.rotation);
   }
@@ -1941,8 +1954,8 @@ const links = [
 '/cases/salesforce-agentforce-360',
 '/cases/intel-ai-io',
 '/cases/vogue-business-archival',
-'/cases/noomo-labs',
-'/cases/noomo-valentime',
+'/cases/crystal-labs',
+'/cases/crystal-valentime',
 '/cases/amd-ai-factory'
 ];
 onSelectCase(links[i], i);
