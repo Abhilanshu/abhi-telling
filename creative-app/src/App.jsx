@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import Experience from './components/Experience';
 import AudioComponent, { audioController } from './components/AudioComponent';
-import { TEXT_BLOCKS } from './scratch/formatted_blocks_clean';
+import { TEXT_BLOCKS } from './data/formatted_blocks_clean';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -367,8 +367,14 @@ export default function App() {
       scroller: document.body,
       start: () => px(getCumulativeScroll(7)),
       end:   () => px(getCumulativeScroll(19)),
-      onEnter:     () => document.body.classList.add('dark-mode'),
-      onLeaveBack: () => document.body.classList.remove('dark-mode'),
+      onEnter:     () => {
+        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
+      },
+      onLeaveBack: () => {
+        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
+      },
     });
     scrollTriggers.push(darkT);
 
