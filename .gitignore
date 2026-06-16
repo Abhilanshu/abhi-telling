@@ -31,6 +31,8 @@ Thumbs.db
 scratch/
 **/scratch/
 
+
+
 # Python scratchpad/inspect files
 scratchpad_*.py
 get_*.py
@@ -67,4 +69,11 @@ after_*.png
 *.md
 !README.md
 
-
+# Allow creative-app/public assets to be committed (overrides all above rules)
+!creative-app/public/**/*.png
+!creative-app/public/**/*.jpg
+!creative-app/public/**/*.jpeg
+!creative-app/public/**/*.gif
+!creative-app/public/**/*.mp3
+!creative-app/public/**/*.hdr
+!creative-app/public/**/*.glb
